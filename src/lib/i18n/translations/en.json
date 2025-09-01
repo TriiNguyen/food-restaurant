@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Authentic Vietnamese Cuisine",
+    "subtitle": "Experience the rich flavors and traditions of Vietnam in the heart of Muehldorf",
+    "cta": "View Menu",
+    "reserve": "Make Reservation"
+  },
+  "about": {
+    "title": "About Miss Hoian",
+    "subtitle": "A Journey Through Vietnamese Culinary Heritage",
+    "description": "Miss Hoian brings the authentic taste of Vietnam to Muehldorf. Our restaurant is named after the ancient town of Hoi An, a UNESCO World Heritage site known for its culinary excellence. We serve traditional Vietnamese dishes prepared with fresh ingredients and time-honored recipes passed down through generations.",
+    "experience": "Years of Experience",
+    "dishes": "Traditional Dishes",
+    "customers": "Happy Customers"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "subtitle": "Discover Authentic Vietnamese Flavors",
+    "categories": {
+      "appetisers": "Appetisers",
+      "all": "All",
+      "mainDishes": "Main Dishes",
+      "desserts": "Desserts",
+      "beverages": "Beverages"
+    },
+    "search": "Search",
+    "footer": "All prices are in EUR. Please inform us of any allergies or dietary requirements.",
+    "items": {
+      "phoCuon": {
+        "name": "Phở Cuốn",
+        "description": "Fresh spring rolls with beef, herbs and dipping sauce"
+      },
+      "bunCha": {
+        "name": "Bún Chả",
+        "description": "Grilled pork with vermicelli noodles and herbs"
+      },
+      "nemRan": {
+        "name": "Nem Ran",
+        "description": "Crispy spring rolls with pork and vegetables"
+      },
+      "mewink": {
+        "name": "Mewink",
+        "description": "Traditional Vietnamese soup with fresh herbs"
+      },
+      "saidFreirew": {
+        "name": "Said Freirew",
+        "description": "Fresh salad with Vietnamese herbs and dressing"
+      },
+      "goiRan": {
+        "name": "Gỏi Rán",
+        "description": "Crispy salad with mixed vegetables and sauce"
+      },
+      "repning": {
+        "name": "Repning",
+        "description": "Traditional Vietnamese appetizer with herbs"
+      },
+      "goiRaMuu": {
+        "name": "Gỏi Ra Múu",
+        "description": "Special Vietnamese salad with fresh ingredients"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A Visual Journey Through Our Culinary World"
+  },
+  "contact": {
+    "title": "Visit Us",
+    "subtitle": "Experience Authentic Vietnamese Cuisine",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "reservation": {
+      "title": "Make a Reservation",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "date": "Reservation Date",
+      "time": "Preferred Time",
+      "guests": "Number of Guests",
+      "message": "Special Requests",
+      "submit": "Book Table"
+    }
+  },
+  "footer": {
+    "description": "Experience authentic Vietnamese cuisine in the heart of Muehldorf. Traditional flavors, warm hospitality, and cultural dining experience.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Info",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  }
+}

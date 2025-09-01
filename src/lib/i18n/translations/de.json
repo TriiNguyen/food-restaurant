@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "menu": "Speisekarte",
+    "gallery": "Galerie",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Authentische Vietnamesische Küche",
+    "subtitle": "Erleben Sie die reichen Aromen und Traditionen Vietnams im Herzen von Mühldorf",
+    "cta": "Speisekarte ansehen",
+    "reserve": "Reservierung"
+  },
+  "about": {
+    "title": "Über Miss Hoian",
+    "subtitle": "Eine Reise durch das vietnamesische kulinarische Erbe",
+    "description": "Miss Hoian bringt den authentischen Geschmack Vietnams nach Mühldorf. Unser Restaurant ist nach der antiken Stadt Hoi An benannt, einem UNESCO-Weltkulturerbe, das für seine kulinarische Exzellenz bekannt ist. Wir servieren traditionelle vietnamesische Gerichte, die mit frischen Zutaten und altehrwürdigen Rezepten zubereitet werden, die über Generationen weitergegeben wurden.",
+    "experience": "Jahre Erfahrung",
+    "dishes": "Traditionelle Gerichte",
+    "customers": "Zufriedene Kunden"
+  },
+  "menu": {
+    "title": "Unsere Speisekarte",
+    "subtitle": "Entdecken Sie authentische vietnamesische Aromen",
+    "categories": {
+      "appetisers": "Vorspeisen",
+      "all": "Alle",
+      "mainDishes": "Hauptgerichte",
+      "desserts": "Desserts",
+      "beverages": "Getränke"
+    },
+    "search": "Suchen",
+    "footer": "Alle Preise sind in EUR. Bitte informieren Sie uns über Allergien oder Ernährungsanforderungen.",
+    "items": {
+      "phoCuon": {
+        "name": "Phở Cuốn",
+        "description": "Frische Frühlingsrollen mit Rindfleisch, Kräutern und Dip-Sauce"
+      },
+      "bunCha": {
+        "name": "Bún Chả",
+        "description": "Gegrilltes Schweinefleisch mit Reisnudeln und Kräutern"
+      },
+      "nemRan": {
+        "name": "Nem Ran",
+        "description": "Knusprige Frühlingsrollen mit Schweinefleisch und Gemüse"
+      },
+      "mewink": {
+        "name": "Mewink",
+        "description": "Traditionelle vietnamesische Suppe mit frischen Kräutern"
+      },
+      "saidFreirew": {
+        "name": "Said Freirew",
+        "description": "Frischer Salat mit vietnamesischen Kräutern und Dressing"
+      },
+      "goiRan": {
+        "name": "Gỏi Rán",
+        "description": "Knuspriger Salat mit gemischtem Gemüse und Sauce"
+      },
+      "repning": {
+        "name": "Repning",
+        "description": "Traditionelle vietnamesische Vorspeise mit Kräutern"
+      },
+      "goiRaMuu": {
+        "name": "Gỏi Ra Múu",
+        "description": "Spezieller vietnamesischer Salat mit frischen Zutaten"
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Eine visuelle Reise durch unsere kulinarische Welt"
+  },
+  "contact": {
+    "title": "Besuchen Sie uns",
+    "subtitle": "Erleben Sie authentische vietnamesische Küche",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "reservation": {
+      "title": "Reservierung vornehmen",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "date": "Reservierungsdatum",
+      "time": "Bevorzugte Zeit",
+      "guests": "Anzahl der Gäste",
+      "message": "Besondere Wünsche",
+      "submit": "Tisch buchen"
+    }
+  },
+  "footer": {
+    "description": "Erleben Sie authentische vietnamesische Küche im Herzen von Mühldorf. Traditionelle Aromen, warme Gastfreundschaft und kulturelles Speiseerlebnis.",
+    "quickLinks": "Schnelle Links",
+    "contact": "Kontaktinfo",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

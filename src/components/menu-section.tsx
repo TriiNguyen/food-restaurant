@@ -6,25 +6,25 @@ import { MenuSearchBar } from "./menu/menu-search-bar";
 import { MenuList } from "./menu/menu-list";
 import { MenuFooter } from "./menu/menu-footer";
 import { menuItems } from "./menu/menu-data";
-import { useI18n } from "@/lib/i18n/context";
+import { useTranslations } from "next-intl";
 
 export function MenuSection() {
-  const { t } = useI18n();
+  const t = useTranslations("menu");
   const [activeCategory, setActiveCategory] = useState("Main Dishes");
   const [searchTerm, setSearchTerm] = useState("");
 
   const menuCategories = [
-    t("menu.categories.appetisers"),
-    t("menu.categories.all"),
-    t("menu.categories.mainDishes"),
-    t("menu.categories.desserts"),
-    t("menu.categories.beverages"),
+    t("categories.appetisers"),
+    t("categories.all"),
+    t("categories.mainDishes"),
+    t("categories.desserts"),
+    t("categories.beverages"),
   ];
 
   const getFilteredItems = () => {
     return menuItems.filter((item) => {
       const matchesCategory =
-        activeCategory === t("menu.categories.all") ||
+        activeCategory === t("categories.all") ||
         item.category === activeCategory;
       const matchesSearch =
         item?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -38,10 +38,10 @@ export function MenuSection() {
       <div className="container mx-auto px-4">
         <header className="text-center mb-16">
           <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
-            {t("menu.title")}
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            {t("menu.subtitle")}
+            {t("subtitle")}
           </p>
         </header>
 

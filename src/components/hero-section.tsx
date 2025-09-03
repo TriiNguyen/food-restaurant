@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Phone } from "lucide-react";
-import { useI18n } from "@/lib/i18n/context";
+import { useTranslations } from "next-intl";
 import vietnameseChefCookingInTraditionalWokWithFlame from "@/assets/vietnamese-chef-cooking-in-traditional-wok-with-fl.png";
 
 export function HeroSection() {
-  const { t } = useI18n();
+  const t = useTranslations("hero");
 
   return (
     <section
@@ -26,13 +26,10 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="font-manrope font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-balance">
-          {t("hero.title")}
+          {t("title")}
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-balance opacity-90">
-          {t("hero.subtitle")}
-        </p>
-        <p className="text-lg mb-12 max-w-2xl mx-auto text-balance opacity-80">
-          {t("about.description")}
+          {t("subtitle")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -40,14 +37,14 @@ export function HeroSection() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-lg px-8 py-3"
           >
-            {t("hero.cta")}
+            {t("cta")}
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-white text-white hover:bg-white hover:text-foreground text-lg px-8 py-3 bg-transparent"
           >
-            {t("hero.reserve")}
+            {t("reserve")}
           </Button>
         </div>
 

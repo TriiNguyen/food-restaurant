@@ -1,10 +1,9 @@
 {
   "nav": {
     "home": "Trang chủ",
-    "about": "Giới thiệu",
     "menu": "Thực đơn",
-    "gallery": "Thư viện ảnh",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "reservation": "Đặt bàn"
   },
   "hero": {
     "title": "Ẩm Thực Việt Nam Chính Gốc",

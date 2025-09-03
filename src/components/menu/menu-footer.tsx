@@ -1,11 +1,10 @@
-import { useI18n } from "@/lib/i18n/context"
+import { useTranslations } from "next-intl";
 
 export function MenuFooter() {
-  const { t } = useI18n()
-
+  const t = useTranslations("menu");
   return (
     <div className="text-center mt-16">
-      <p className="text-muted-foreground mb-4">{t("menu.footer")}</p>
+      <p className="text-muted-foreground mb-4">{t("footer")}</p>
     </div>
-  )
+  );
 }

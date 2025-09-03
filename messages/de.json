@@ -1,10 +1,9 @@
 {
   "nav": {
     "home": "Startseite",
-    "about": "Über uns",
     "menu": "Speisekarte",
-    "gallery": "Galerie",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "reservation": "Reservierung"
   },
   "hero": {
     "title": "Authentische Vietnamesische Küche",

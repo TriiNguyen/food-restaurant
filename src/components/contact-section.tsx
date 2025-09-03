@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { useI18n } from "@/lib/i18n/context";
+import { useTranslations } from "next-intl";
 
 export function ContactSection() {
-  const { t } = useI18n();
-
+  const t = useTranslations();
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -28,7 +27,7 @@ export function ContactSection() {
             <Card>
               <CardHeader>
                 <CardTitle className="font-manrope text-xl">
-                  {t("footer.contact")}
+                  {t("contact.title")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -111,9 +110,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">
-                      {t("contact.reservation.lastName")}
+                      {t("contact.reservation.name")}
                     </label>
-                    <Input placeholder={t("contact.reservation.lastName")} />
+                    <Input placeholder={t("contact.reservation.name")} />
                   </div>
                 </div>
 

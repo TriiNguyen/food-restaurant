@@ -2,21 +2,21 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Award } from "lucide-react";
-import { useI18n } from "@/lib/i18n/context";
+import { useTranslations } from "next-intl";
 import vietnameseChefPreparingTraditionalPhoInAuthe from "@/assets/vietnamese-chef-preparing-traditional-pho-in-authe.png";
 
 export function AboutSection() {
-  const { t } = useI18n();
+  const t = useTranslations("about");
 
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
-            {t("about.title")}
+            {t("title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            {t("about.subtitle")}
+            {t("subtitle")}
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export function AboutSection() {
               Authentic Vietnamese Heritage
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              {t("about.description")}
+              {t("description")}
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Every dish we serve is prepared with the same care and attention
@@ -42,9 +42,9 @@ export function AboutSection() {
               genuine flavors in every bite.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our restaurant is more than just a place to eat – it's a cultural
-              bridge that brings the warmth, hospitality, and rich culinary
-              traditions of Vietnam to our community in Muehldorf.
+              Our restaurant is more than just a place to eat – it&apos;s a
+              cultural bridge that brings the warmth, hospitality, and rich
+              culinary traditions of Vietnam to our community in Muehldorf.
             </p>
           </div>
         </div>

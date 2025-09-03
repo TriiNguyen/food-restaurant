@@ -1,77 +1,84 @@
+import { StaticImageData } from "next/image";
+
 export interface MenuItem {
   id: number;
-  nameKey: string;
-  descriptionKey: string;
+  name: string;
+  description: string;
   price: string;
-  image: string;
+  image: string | StaticImageData;
   category: string;
-  name?: string;
-  description?: string;
 }
+
+import phoCuon from "@/assets/bun-cha.png";
+import mewink from "@/assets/mewink.png";
+import nemRan from "@/assets/nem-ran.png";
+import goiRan from "@/assets/goi-ran.png";
+import repning from "@/assets/goi-ra-muu.png";
+import goiRaMuu from "@/assets/goi-ra-muu.png";
 
 export const menuItems: MenuItem[] = [
   {
     id: 1,
-    nameKey: "menu.items.phoCuon.name",
-    descriptionKey: "menu.items.phoCuon.description",
+    name: "phoCuon",
+    description: "pho Cuon Description",
     price: "$120",
-    image: "/food-restaurant/src/assets/bun-cha.png",
+    image: phoCuon,
     category: "Appetisers",
   },
   {
     id: 2,
-    nameKey: "menu.items.mewink.name",
-    descriptionKey: "menu.items.mewink.description",
+    name: "mewink",
+    description: "mewink Description",
     price: "$290",
-    image: "/food-restaurant/src/assets/goi-ra-muu.png",
+    image: mewink,
     category: "Main Dishes",
   },
   {
     id: 3,
-    nameKey: "menu.items.bunCha.name",
-    descriptionKey: "menu.items.bunCha.description",
+    name: "bunCha",
+    description: "bun Cha Description",
     price: "$180",
-    image: "/food-restaurant/src/assets/goi-ran.png",
+    image: nemRan,
     category: "Main Dishes",
   },
   {
     id: 4,
-    nameKey: "menu.items.saidFreirew.name",
-    descriptionKey: "menu.items.saidFreirew.description",
+    name: "saidFreirew",
+    description: "said Freirew Description",
     price: "$290",
-    image: "/food-restaurant/src/assets/nem-ran.png",
+    image: nemRan,
     category: "Appetisers",
   },
   {
     id: 5,
-    nameKey: "menu.items.nemRan.name",
-    descriptionKey: "menu.items.nemRan.description",
+    name: "nemRan",
+    description: "nem Ran Description",
     price: "$300",
-    image: "/food-restaurant/src/assets/mewink.png",
+    image: mewink,
     category: "Appetisers",
   },
   {
     id: 6,
-    nameKey: "menu.items.goiRan.name",
-    descriptionKey: "menu.items.goiRan.description",
+    name: "goiRan",
+    description: "goi Ran Description",
     price: "$390",
-    image: "/food-restaurant/src/assets/goi-ran.png",
+    image: goiRan,
     category: "Main Dishes",
   },
   {
     id: 7,
-    nameKey: "menu.items.repning.name",
-    descriptionKey: "menu.items.repning.description",
+    name: "repning",
+    description: "repning Description",
     price: "$300",
-    image: "/food-restaurant/src/assets/goi-ra-muu.png",
+    image: repning,
     category: "Appetisers",
   },
   {
     id: 8,
-    nameKey: "menu.items.goiRaMuu.name",
-    descriptionKey: "menu.items.goiRaMuu.description",
+    name: "goiRaMuu",
+    description: "goi Ra Muu Description",
     price: "$290",
-    image: "/food-restaurant/src/assets/goi-ra-muu.png",
+    image: goiRaMuu,
     category: "Main Dishes",
   },
 ];

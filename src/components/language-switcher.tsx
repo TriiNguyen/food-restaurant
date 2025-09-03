@@ -12,16 +12,21 @@ import { routing } from "@/i18n/routing";
 function stripLeadingLocale(pathname: string) {
   const parts = pathname.split("/");
   // parts[0] = "", parts[1] có thể là locale
-  return routing.locales.includes(parts[1] as any)
+  return parts[1] && routing.locales.includes(parts[1] as "en" | "de" | "vi")
     ? "/" + parts.slice(2).join("/") || "/"
     : pathname || "/";
 }
 
 function buildPath(pathname: string, nextLocale: string) {
+  // Bỏ prefix locale hiện tại (nếu có), trả về path “thuần”
   const bare = stripLeadingLocale(pathname);
-  // as-needed: defaultLocale không có prefix
-  if (nextLocale === routing.defaultLocale) return bare === "" ? "/" : bare;
-  return bare === "/" ? `/${nextLocale}` : `/${nextLocale}${bare}`;
+
+  // Chuẩn hoá: rỗng => "/", tránh double slash
+  const path = bare === "" ? "/" : bare.replace(/\/+/g, "/");
+
+  // Luôn prefix locale, kể cả defaultLocale
+  if (path === "/") return `/${nextLocale}`;
+  return `/${nextLocale}${path}`;
 }
 
 const languages = [
@@ -41,6 +46,7 @@ export function LanguageSwitcher() {
   const onChange = (next: string) => {
     if (next === current) return;
     const base = buildPath(pathname, next);
+
     const url = search.toString() ? `${base}?${search}` : base;
     router.replace(url, { scroll: false });
   };

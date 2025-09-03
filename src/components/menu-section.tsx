@@ -21,18 +21,6 @@ export function MenuSection() {
     t("categories.beverages"),
   ];
 
-  const getFilteredItems = () => {
-    return menuItems.filter((item) => {
-      const matchesCategory =
-        activeCategory === t("categories.all") ||
-        item.category === activeCategory;
-      const matchesSearch =
-        item?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item?.description?.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
-  };
-
   return (
     <section id="menu" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -53,7 +41,7 @@ export function MenuSection() {
 
         <MenuSearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
-        <MenuList items={getFilteredItems()} />
+        <MenuList items={menuItems} />
 
         <MenuFooter />
       </div>

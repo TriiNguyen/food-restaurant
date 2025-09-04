@@ -87,7 +87,15 @@
       "guests": "Số lượng khách",
       "message": "Yêu cầu đặc biệt",
       "submit": "Đặt bàn"
-    }
+    },
+	"contactForm": {
+		"YourName": "Tên của bạn",
+		"YourEmail": "Email của bạn",
+		"YourPhone": "Số điện thoại của bạn",
+		"YourMessage": "Nội dung của bạn",
+		"Submit": "Gửi",
+		"title": "Ý kiến của bạn quan trọng với chúng tôi"
+	}
   },
   "footer": {
     "description": "Trải nghiệm ẩm thực Việt Nam chính gốc tại trung tâm Muehldorf. Hương vị truyền thống, lòng hiếu khách ấm áp và trải nghiệm ẩm thực văn hóa.",

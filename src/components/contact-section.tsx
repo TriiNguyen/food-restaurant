@@ -23,80 +23,63 @@ export function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="font-manrope text-xl">
-                  {t("contact.title")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold">{t("contact.address")}</h4>
-                    <p className="text-muted-foreground">
-                      Hauptstraße 123
-                      <br />
-                      84453 Mühldorf am Inn
-                      <br />
-                      Germany
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Phone className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold">{t("contact.phone")}</h4>
-                    <p className="text-muted-foreground">+49 8631 123456</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Mail className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold">{t("contact.email")}</h4>
-                    <p className="text-muted-foreground">
-                      info@misshoian-muehldorf.de
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Clock className="w-5 h-5 text-primary mt-1" />
-                  <div>
-                    <h4 className="font-semibold">{t("contact.hours")}</h4>
-                    <div className="text-muted-foreground space-y-1">
-                      <p>Monday - Sunday: 11:00 - 22:00</p>
-                      <p>Kitchen closes at 21:30</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Map Placeholder */}
-            <Card>
-              <CardContent className="p-0">
-                <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive Map</p>
-                    <p className="text-sm text-muted-foreground">
-                      Hauptstraße 123, Mühldorf am Inn
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Reservation Form */}
           <Card>
             <CardHeader>
               <CardTitle className="font-manrope text-xl">
-                {t("contact.reservation.title")}
+                {t("contact.title")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">{t("contact.address")}</h4>
+                  <p className="text-muted-foreground">
+                    Hauptstraße 123
+                    <br />
+                    84453 Mühldorf am Inn
+                    <br />
+                    Germany
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <Phone className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">{t("contact.phone")}</h4>
+                  <p className="text-muted-foreground">+49 8631 123456</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <Mail className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">{t("contact.email")}</h4>
+                  <p className="text-muted-foreground">
+                    info@misshoian-muehldorf.de
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <Clock className="w-5 h-5 text-primary mt-1" />
+                <div>
+                  <h4 className="font-semibold">{t("contact.hours")}</h4>
+                  <div className="text-muted-foreground space-y-1">
+                    <p>Monday - Sunday: 11:00 - 22:00</p>
+                    <p>Kitchen closes at 21:30</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Contact Form */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="font-manrope text-xl">
+                {t("contact.contactForm.title")}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -104,67 +87,34 @@ export function ContactSection() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">
-                      {t("contact.reservation.name")}
+                      {t("contact.contactForm.YourName")}
                     </label>
-                    <Input placeholder={t("contact.reservation.name")} />
+                    <Input placeholder={t("contact.contactForm.YourName")} />
                   </div>
                   <div>
                     <label className="text-sm font-medium mb-2 block">
-                      {t("contact.reservation.name")}
+                      {t("contact.contactForm.YourEmail")}
                     </label>
-                    <Input placeholder={t("contact.reservation.name")} />
+                    <Input placeholder={t("contact.contactForm.YourEmail")} />
                   </div>
                 </div>
 
                 <div>
                   <label className="text-sm font-medium mb-2 block">
-                    {t("contact.reservation.email")}
-                  </label>
-                  <Input
-                    type="email"
-                    placeholder={t("contact.reservation.email")}
-                  />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">
-                    {t("contact.reservation.phone")}
+                    {t("contact.contactForm.YourPhone")}
                   </label>
                   <Input
                     type="tel"
-                    placeholder={t("contact.reservation.phone")}
+                    placeholder={t("contact.contactForm.YourPhone")}
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">
-                      {t("contact.reservation.date")}
-                    </label>
-                    <Input type="date" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">
-                      {t("contact.reservation.time")}
-                    </label>
-                    <Input type="time" />
-                  </div>
-                </div>
-
                 <div>
                   <label className="text-sm font-medium mb-2 block">
-                    {t("contact.reservation.guests")}
-                  </label>
-                  <Input type="number" min="1" max="20" placeholder="2" />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">
-                    {t("contact.reservation.message")}
+                    {t("contact.contactForm.YourMessage")}
                   </label>
                   <Textarea
-                    placeholder={t("contact.reservation.message")}
-                    rows={4}
+                    placeholder={t("contact.contactForm.YourMessage")}
                   />
                 </div>
 
@@ -175,6 +125,21 @@ export function ContactSection() {
             </CardContent>
           </Card>
         </div>
+
+        {/* Map Placeholder */}
+        <Card className="mt-12">
+          <CardContent className="p-0">
+            <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
+                <p className="text-muted-foreground">Interactive Map</p>
+                <p className="text-sm text-muted-foreground">
+                  Hauptstraße 123, Mühldorf am Inn
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

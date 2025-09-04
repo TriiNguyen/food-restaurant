@@ -87,7 +87,15 @@
       "guests": "Number of Guests",
       "message": "Special Requests",
       "submit": "Book Table"
-    }
+    },
+	"contactForm": {
+		"YourName": "Your Name",
+		"YourEmail": "Your Email",
+		"YourPhone": "Your Phone",
+		"YourMessage": "Your Message",
+		"Submit": "Submit",
+		"title": "Your opinion is important to us"
+	}
   },
   "footer": {
     "description": "Experience authentic Vietnamese cuisine in the heart of Muehldorf. Traditional flavors, warm hospitality, and cultural dining experience.",

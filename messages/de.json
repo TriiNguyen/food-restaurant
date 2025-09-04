@@ -87,7 +87,15 @@
       "guests": "Anzahl der Gäste",
       "message": "Besondere Wünsche",
       "submit": "Tisch buchen"
-    }
+    },
+	"contactForm": {
+		"YourName": "Ihr Name",
+		"YourEmail": "Ihre E-Mail",
+		"YourPhone": "Ihre Telefonnummer",
+		"YourMessage": "Ihre Nachricht",
+		"Submit": "Absenden",
+		"title": "Ihre Meinung ist uns wichtig"
+	}
   },
   "footer": {
     "description": "Erleben Sie authentische vietnamesische Küche im Herzen von Mühldorf. Traditionelle Aromen, warme Gastfreundschaft und kulturelles Speiseerlebnis.",

@@ -1,38 +1,48 @@
+import phoCuon from "@/assets/bun-cha.png";
+import mewink from "@/assets/mewink.png";
+import nemRan from "@/assets/nem-ran.png";
+import goiRan from "@/assets/goi-ran.png";
+import repning from "@/assets/goi-ra-muu.png";
+import goiRaMuu from "@/assets/goi-ra-muu.png";
+
 export function GallerySection() {
   const galleryImages = [
     {
-      src: "/vietnamese-pho-bowl-with-beef--herbs--and-steam-ri.png",
+      src: phoCuon.src,
       alt: "Traditional Vietnamese Pho",
     },
     {
-      src: "/fresh-vietnamese-spring-rolls-with-shrimp-and-herb.png",
+      src: mewink.src,
       alt: "Fresh Spring Rolls",
     },
     {
-      src: "/vietnamese-restaurant-interior-with-traditional-la.png",
+      src: nemRan.src,
       alt: "Restaurant Interior",
     },
     {
-      src: "/vietnamese-banh-mi-sandwich-with-grilled-meat-and-.png",
+      src: goiRan.src,
       alt: "Vietnamese Banh Mi",
     },
     {
-      src: "/vietnamese-chef-cooking-in-traditional-wok-with-fl.png",
+      src: repning.src,
       alt: "Chef Cooking",
     },
     {
-      src: "/vietnamese-coffee-drip-filter-with-condensed-milk-.png",
+      src: goiRaMuu.src,
       alt: "Vietnamese Coffee",
     },
-  ]
+  ];
 
   return (
     <section id="gallery" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">Gallery</h2>
+          <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
+            Gallery
+          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            A visual journey through our authentic Vietnamese dishes and warm, welcoming atmosphere
+            A visual journey through our authentic Vietnamese dishes and warm,
+            welcoming atmosphere
           </p>
         </div>
 
@@ -53,5 +63,5 @@ export function GallerySection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

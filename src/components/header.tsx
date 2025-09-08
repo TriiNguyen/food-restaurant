@@ -5,12 +5,35 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { LanguageSwitcher } from "./language-switcher";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const navItems = [
+    {
+      label: t("home"),
+      href: `/${locale}`,
+    },
 
+    {
+      label: t("menu"),
+      href: `/${locale}/menu`,
+    },
+    {
+      label: t("reservation"),
+      href: `/${locale}/reservation`,
+    },
+    {
+      label: t("contact"),
+      href: `/${locale}/contact`,
+    },
+  ];
+
+  console.log(pathname);
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60 border-b border-border">
       <div className="container mx-auto px-4">
@@ -29,19 +52,16 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center space-x-8">
-            <li className="text-foreground hover:text-primary transition-colors">
-              <Link href="/">{t("home")}</Link>
-            </li>
-
-            <li className="text-foreground hover:text-primary transition-colors">
-              <Link href="/menu">{t("menu")}</Link>
-            </li>
-            <li className="text-foreground hover:text-primary transition-colors">
-              <Link href="/reservation">{t("reservation")}</Link>
-            </li>
-            <li className="text-foreground hover:text-primary transition-colors">
-              <Link href="/contact">{t("contact")}</Link>
-            </li>
+            {navItems.map((item) => (
+              <li
+                key={item.href}
+                className={`text-foreground hover:text-primary transition-colors ${
+                  pathname === item.href ? "text-primary" : ""
+                }`}
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
 
           {/* Contact Info, Language Switcher & Reservation Button */}

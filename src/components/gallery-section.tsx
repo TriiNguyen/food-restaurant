@@ -1,35 +1,37 @@
-import phoCuon from "@/assets/bun-cha.png";
-import mewink from "@/assets/mewink.png";
-import nemRan from "@/assets/nem-ran.png";
-import goiRan from "@/assets/goi-ran.png";
-import repning from "@/assets/goi-ra-muu.png";
-import goiRaMuu from "@/assets/goi-ra-muu.png";
+import GalleryImage1 from "@/assets/gallery1.png";
+import GalleryImage2 from "@/assets/gallery2.png";
+import GalleryImage3 from "@/assets/gallery3.png";
+import GalleryImage4 from "@/assets/gallery4.png";
+import GalleryImage5 from "@/assets/gallery5.png";
+import GalleryImage6 from "@/assets/gallery6.png";
+
+import Image from "next/image";
 
 export function GallerySection() {
   const galleryImages = [
     {
-      src: phoCuon.src,
-      alt: "Traditional Vietnamese Pho",
+      src: GalleryImage1.src,
+      alt: "Gallery Image 1",
     },
     {
-      src: mewink.src,
-      alt: "Fresh Spring Rolls",
+      src: GalleryImage2.src,
+      alt: "Gallery Image 2",
     },
     {
-      src: nemRan.src,
-      alt: "Restaurant Interior",
+      src: GalleryImage3.src,
+      alt: "Gallery Image 3",
     },
     {
-      src: goiRan.src,
-      alt: "Vietnamese Banh Mi",
+      src: GalleryImage4.src,
+      alt: "Gallery Image 4",
     },
     {
-      src: repning.src,
-      alt: "Chef Cooking",
+      src: GalleryImage5.src,
+      alt: "Gallery Image 5",
     },
     {
-      src: goiRaMuu.src,
-      alt: "Vietnamese Coffee",
+      src: GalleryImage6.src,
+      alt: "Gallery Image 6",
     },
   ];
 
@@ -52,10 +54,12 @@ export function GallerySection() {
               key={index}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <img
-                src={image.src || "/placeholder.svg"}
+              <Image
+                src={image.src || "/"}
                 alt={image.alt}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                width={500}
+                height={500}
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
             </div>

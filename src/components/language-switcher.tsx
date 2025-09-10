@@ -1,55 +1,54 @@
-"use client";
+'use client'
 
-import { Locale } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { Locale } from 'next-intl'
+import { Button } from '@/components/ui/button'
+import { ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 
-import { useLocale } from "next-intl";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { useLocale } from 'next-intl'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { routing } from '@/i18n/routing'
 
 function stripLeadingLocale(pathname: string) {
-  const parts = pathname.split("/");
+  const parts = pathname.split('/')
   // parts[0] = "", parts[1] có thể là locale
-  return parts[1] && routing.locales.includes(parts[1] as "en" | "de" | "vi")
-    ? "/" + parts.slice(2).join("/") || "/"
-    : pathname || "/";
+  return parts[1] && routing.locales.includes(parts[1] as 'en' | 'de')
+    ? '/' + parts.slice(2).join('/') || '/'
+    : pathname || '/'
 }
 
 function buildPath(pathname: string, nextLocale: string) {
   // Bỏ prefix locale hiện tại (nếu có), trả về path “thuần”
-  const bare = stripLeadingLocale(pathname);
+  const bare = stripLeadingLocale(pathname)
 
   // Chuẩn hoá: rỗng => "/", tránh double slash
-  const path = bare === "" ? "/" : bare.replace(/\/+/g, "/");
+  const path = bare === '' ? '/' : bare.replace(/\/+/g, '/')
 
   // Luôn prefix locale, kể cả defaultLocale
-  if (path === "/") return `/${nextLocale}`;
-  return `/${nextLocale}${path}`;
+  if (path === '/') return `/${nextLocale}`
+  return `/${nextLocale}${path}`
 }
 
 const languages = [
-  { code: "en" as const, name: "English", flag: "🇺🇸" },
-  { code: "de" as const, name: "Deutsch", flag: "🇩🇪" },
-  { code: "vi" as const, name: "Tiếng Việt", flag: "🇻🇳" },
-] as const;
+  { code: 'en' as const, name: 'English', flag: '🇺🇸' },
+  { code: 'de' as const, name: 'Deutsch', flag: '🇩🇪' },
+] as const
 
 export function LanguageSwitcher() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const current = useLocale();
-  const router = useRouter();
-  const pathname = usePathname() ?? "/";
-  const search = useSearchParams();
+  const current = useLocale()
+  const router = useRouter()
+  const pathname = usePathname() ?? '/'
+  const search = useSearchParams()
 
   const onChange = (next: string) => {
-    if (next === current) return;
-    const base = buildPath(pathname, next);
+    if (next === current) return
+    const base = buildPath(pathname, next)
 
-    const url = search.toString() ? `${base}?${search}` : base;
-    router.replace(url, { scroll: false });
-  };
+    const url = search.toString() ? `${base}?${search}` : base
+    router.replace(url, { scroll: false })
+  }
   return (
     <div className="relative">
       <Button
@@ -58,9 +57,7 @@ export function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 text-foreground hover:text-primary"
       >
-        <span className="text-lg">
-          {languages.find((lang) => lang.code === current)?.flag}
-        </span>
+        <span className="text-lg">{languages.find((lang) => lang.code === current)?.flag}</span>
         <span className="hidden sm:inline text-sm">
           {languages.find((lang) => lang.code === current)?.name}
         </span>
@@ -73,11 +70,11 @@ export function LanguageSwitcher() {
             <button
               key={lang.code as Locale}
               onClick={() => {
-                onChange(lang.code);
-                setIsOpen(false);
+                onChange(lang.code)
+                setIsOpen(false)
               }}
               className={`w-full px-3 py-2 text-left text-sm hover:bg-accent hover:text-accent-foreground flex items-center space-x-2 first:rounded-t-md last:rounded-b-md ${
-                current === lang.code ? "bg-accent text-accent-foreground" : ""
+                current === lang.code ? 'bg-accent text-accent-foreground' : ''
               }`}
             >
               <span className="text-lg">{lang.flag}</span>
@@ -88,9 +85,7 @@ export function LanguageSwitcher() {
       )}
 
       {/* Backdrop to close dropdown */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
-      )}
+      {isOpen && <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />}
     </div>
-  );
+  )
 }

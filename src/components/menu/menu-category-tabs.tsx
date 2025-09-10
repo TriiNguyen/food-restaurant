@@ -1,33 +1,29 @@
-"use client";
+'use client'
 
-import { Button } from "../ui/button";
+import { Button } from '../ui/button'
 
 interface MenuCategoryTabsProps {
-  categories: string[];
-  activeCategory: string;
-  onCategoryChange: (category: string) => void;
+  categories: { id: number; name: string }[]
+  activeCategoryId: number
+  onCategoryChange: (categoryId: number) => void
 }
 
 export function MenuCategoryTabs({
   categories,
-  activeCategory,
+  activeCategoryId,
   onCategoryChange,
 }: MenuCategoryTabsProps) {
   return (
     <div className="flex flex-wrap justify-center gap-2 mb-8">
       {categories.map((category) => (
         <Button
-          key={category}
-          onClick={() => onCategoryChange(category)}
-          className={`px-6 py-2 rounded-full font-medium transition-colors cursor-pointer ${
-            activeCategory === category
-              ? "bg-amber-600 text-white"
-              : "bg-muted text-muted-foreground hover:bg-muted/80"
-          }`}
+          key={category.id}
+          onClick={() => onCategoryChange(category.id)}
+          variant={activeCategoryId === category.id ? 'default' : 'secondary'}
         >
-          {category}
+          {category.name}
         </Button>
       ))}
     </div>
-  );
+  )
 }

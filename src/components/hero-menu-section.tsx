@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import nemRan from '@/assets/nem-ran.png'
+import HeroImage from '@/assets/menu-hero-image.png'
 
 export function HeroMenuSection() {
   const t = useTranslations('menu')
@@ -9,13 +9,13 @@ export function HeroMenuSection() {
   return (
     <section
       id="home"
-      className="relative min-h-[640px] flex items-center justify-center overflow-hidden"
+      className="relative h-[640px] flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${nemRan.src})`,
+          backgroundImage: `url(${HeroImage.src})`,
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>

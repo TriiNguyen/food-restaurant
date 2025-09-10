@@ -1,41 +1,40 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { MenuCategoryTabs } from "./menu/menu-category-tabs";
-import { MenuSearchBar } from "./menu/menu-search-bar";
-import { MenuList } from "./menu/menu-list";
-import { MenuFooter } from "./menu/menu-footer";
-import { menuItems } from "./menu/menu-data";
-import { useTranslations } from "next-intl";
+import { useState } from 'react'
+import { MenuCategoryTabs } from './menu/menu-category-tabs'
+import { MenuSearchBar } from './menu/menu-search-bar'
+import { MenuList } from './menu/menu-list'
+import { MenuFooter } from './menu/menu-footer'
+import { menuItems } from './menu/menu-data'
+import { useTranslations } from 'next-intl'
 
 export function MenuSection() {
-  const t = useTranslations("menu");
-  const [activeCategory, setActiveCategory] = useState("Main Dishes");
-  const [searchTerm, setSearchTerm] = useState("");
+  const t = useTranslations('menu')
+  const [activeCategory, setActiveCategory] = useState(1)
+  const [searchTerm, setSearchTerm] = useState('')
 
   const menuCategories = [
-    t("categories.appetisers"),
-    t("categories.all"),
-    t("categories.mainDishes"),
-    t("categories.desserts"),
-    t("categories.beverages"),
-  ];
+    { id: 1, name: t('categories.appetisers') },
+    { id: 3, name: t('categories.mainDishes') },
+    { id: 4, name: t('categories.desserts') },
+    { id: 5, name: t('categories.beverages') },
+  ]
 
   return (
-    <section id="menu" className="py-20 bg-background">
+    <section id="menu" className=" bg-background">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16">
           <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
-            {t("title")}
+            {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            {t("subtitle")}
+            {t('subtitle')}
           </p>
         </header>
 
         <MenuCategoryTabs
           categories={menuCategories}
-          activeCategory={activeCategory}
+          activeCategoryId={activeCategory}
           onCategoryChange={setActiveCategory}
         />
 
@@ -46,5 +45,5 @@ export function MenuSection() {
         <MenuFooter />
       </div>
     </section>
-  );
+  )
 }

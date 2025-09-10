@@ -1,31 +1,29 @@
-import type { MenuItem as MenuItemType } from "./menu-data";
-import Image from "next/image";
+import type { MenuItem as MenuItemType } from './menu-data'
+import Image from 'next/image'
 
 interface MenuItemProps {
-  item: MenuItemType;
+  item: MenuItemType
 }
 
 export function MenuItem({ item }: MenuItemProps) {
   return (
-    <article className="flex items-center gap-4 p-4 rounded-lg bg-card hover:bg-muted/50 transition-colors">
+    <article className="flex flex-col items-center gap-4 p-4 rounded-lg  hover:bg-muted/50 transition-colors bg-[#171717]">
       <Image
-        src={item.image || "/placeholder.svg"}
+        src={item.image || '/placeholder.svg'}
         alt={item.name}
-        className="w-20 h-20 rounded-full object-cover flex-shrink-0"
+        className="w-full max-h-[200px] object-cover flex-shrink-0"
         width={80}
         height={80}
       />
-      <div className="flex-1 min-w-0">
-        <h3 className="font-manrope font-bold text-lg text-foreground mb-1">
-          {item.name}
-        </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+      <div className="w-full">
+        <h3 className="font-bold text-lg text-primary mb-1 text-left">{item.name}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed text-left">
           {item.description}
         </p>
+        <span className="font-bold text-lg text-foreground flex-shrink-0 text-left">
+          {item.price}
+        </span>
       </div>
-      <span className="font-bold text-lg text-foreground flex-shrink-0">
-        {item.price}
-      </span>
     </article>
-  );
+  )
 }

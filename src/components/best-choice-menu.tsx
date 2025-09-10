@@ -55,10 +55,10 @@ export function BestChoiceMenu() {
   return (
     <section id="best-choice-menu" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
+        <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground text-center">
           {t('title')}
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance text-center">
           {t('subtitle')}
         </p>
         <Carousel
@@ -69,8 +69,8 @@ export function BestChoiceMenu() {
           <CarouselContent>
             {bestChoiceMenuItems.map((item) => (
               <CarouselItem key={item.id} className="md:basis-1/3">
-                <Image src={item.image} alt={item.title} />
-                <h3 className="font-manrope font-bold text-lg text-primary mb-1 mt-2">
+                <Image src={item.image} alt={item.title} className="scale-105" />
+                <h3 className="font-manrope font-bold text-lg text-primary mb-1 mt-5">
                   {item.title}
                 </h3>
               </CarouselItem>

@@ -35,6 +35,18 @@ const hsMische = localFont({
   display: 'swap',
 })
 
+const SFProDisplay = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/sf-pro-display/SFPRODISPLAYREGULAR.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-sf-pro-display',
+  display: 'swap',
+})
+
 export default async function RootLayout({
   children,
   params,
@@ -49,7 +61,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${manrope.variable} ${hsMische.variable}`}
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${manrope.variable} ${hsMische.variable} ${SFProDisplay.variable}`}
       >
         <NextIntlClientProvider>
           <Suspense fallback={null}>

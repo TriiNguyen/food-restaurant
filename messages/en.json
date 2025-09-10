@@ -78,6 +78,8 @@
     "email": "Email",
     "hours": "Opening Hours",
     "reservation": {
+	"heading": "Haben Sie vor, einen Tisch fürs Abendessen zu reservieren?",
+	"description": "You can book a table online or call to enjoy delicious food in a relaxing and cozy space. We look forward to welcoming you in the near future!",
       "title": "Make a Reservation",
       "name": "Full Name",
       "email": "Email Address",
@@ -96,6 +98,10 @@
 		"Submit": "Submit",
 		"title": "Your opinion is important to us"
 	}
+  },
+  "reservation": {
+    "title": "Make a Reservation",
+    "subtitle": "Experience Authentic Vietnamese Cuisine"
   },
   "footer": {
     "description": "Experience authentic Vietnamese cuisine in the heart of Muehldorf. Traditional flavors, warm hospitality, and cultural dining experience.",

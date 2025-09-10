@@ -78,6 +78,8 @@
     "email": "E-Mail",
     "hours": "Öffnungszeiten",
     "reservation": {
+      "heading": "Haben Sie vor, einen Tisch fürs Abendessen zu reservieren?",
+      "description": "Sie können einen Tisch online buchen oder telefonisch genießen. Wir freuen uns, Sie bald begrüßen zu dürfen!",
       "title": "Reservierung vornehmen",
       "name": "Vollständiger Name",
       "email": "E-Mail-Adresse",
@@ -96,6 +98,10 @@
 		"Submit": "Absenden",
 		"title": "Ihre Meinung ist uns wichtig"
 	}
+  },
+  "reservation": {
+    "title": "Reservierung vornehmen",
+    "subtitle": "Erleben Sie authentische vietnamesische Küche"
   },
   "footer": {
     "description": "Erleben Sie authentische vietnamesische Küche im Herzen von Mühldorf. Traditionelle Aromen, warme Gastfreundschaft und kulturelles Speiseerlebnis.",

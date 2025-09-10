@@ -12,6 +12,7 @@ import { Footer } from '@/components/footer'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import localFont from 'next/font/local'
+import { FloatGroupIcons } from '@/components/float-group-icons'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ export default async function RootLayout({
           <Suspense fallback={null}>
             <Header />
             {children}
+            <FloatGroupIcons />
             <Footer />
           </Suspense>
         </NextIntlClientProvider>

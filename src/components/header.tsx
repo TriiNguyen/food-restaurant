@@ -1,39 +1,39 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
-import { LanguageSwitcher } from "./language-switcher";
-import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Menu, X, Phone } from 'lucide-react'
+import { LanguageSwitcher } from './language-switcher'
+import Link from 'next/link'
+import { useTranslations, useLocale } from 'next-intl'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const t = useTranslations("nav");
-  const locale = useLocale();
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const t = useTranslations('nav')
+  const locale = useLocale()
   const navItems = [
     {
-      label: t("home"),
+      label: t('home'),
       href: `/${locale}`,
     },
 
     {
-      label: t("menu"),
+      label: t('menu'),
       href: `/${locale}/menu`,
     },
     {
-      label: t("reservation"),
+      label: t('reservation'),
       href: `/${locale}/reservation`,
     },
     {
-      label: t("contact"),
+      label: t('contact'),
       href: `/${locale}/contact`,
     },
-  ];
+  ]
 
-  console.log(pathname);
+  console.log(pathname)
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60 border-b border-border">
       <div className="container mx-auto px-4">
@@ -41,13 +41,9 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">
-                MH
-              </span>
+              <span className="text-primary-foreground font-bold text-sm">MH</span>
             </div>
-            <span className="font-manrope font-bold text-xl text-foreground">
-              Miss Hoian
-            </span>
+            <span className="font-manrope font-bold text-xl text-foreground">Miss Hoian</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -55,8 +51,8 @@ export function Header() {
             {navItems.map((item) => (
               <li
                 key={item.href}
-                className={`text-foreground hover:text-primary transition-colors ${
-                  pathname === item.href ? "text-primary" : ""
+                className={`text-foreground hover:text-primary transition-colors font-bold ${
+                  pathname === item.href ? 'text-primary' : ''
                 }`}
               >
                 <Link href={item.href}>{item.label}</Link>
@@ -71,21 +67,12 @@ export function Header() {
               <span>+49 8631 123456</span>
             </div>
             <LanguageSwitcher />
-            <Button className="bg-primary hover:bg-primary/90">
-              {t("reservation")}
-            </Button>
+            <Button className="bg-primary hover:bg-primary/90">{t('reservation')}</Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -94,28 +81,26 @@ export function Header() {
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               <li className="text-foreground hover:text-primary transition-colors">
-                <Link href="/">{t("home")}</Link>
+                <Link href="/">{t('home')}</Link>
               </li>
 
               <li className="text-foreground hover:text-primary transition-colors">
-                <Link href="/menu">{t("menu")}</Link>
+                <Link href="/menu">{t('menu')}</Link>
               </li>
               <li className="text-foreground hover:text-primary transition-colors">
-                <Link href="/reservation">{t("reservation")}</Link>
+                <Link href="/reservation">{t('reservation')}</Link>
               </li>
               <li className="text-foreground hover:text-primary transition-colors">
-                <Link href="/contact">{t("contact")}</Link>
+                <Link href="/contact">{t('contact')}</Link>
               </li>
               <div className="pt-4 border-t border-border space-y-4">
                 <LanguageSwitcher />
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  {t("reserve")}
-                </Button>
+                <Button className="w-full bg-primary hover:bg-primary/90">{t('reserve')}</Button>
               </div>
             </nav>
           </div>
         )}
       </div>
     </header>
-  );
+  )
 }

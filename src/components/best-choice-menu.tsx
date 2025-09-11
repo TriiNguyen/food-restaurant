@@ -10,6 +10,7 @@ import {
   CarouselNext,
 } from './ui/carousel'
 import Image, { StaticImageData } from 'next/image'
+import BestChoiceIcon from '../../public/best-choice-icon.svg'
 
 const bestChoiceMenuItems: BestChoiceMenuItem[] = [
   {
@@ -58,7 +59,7 @@ export function BestChoiceMenu() {
         <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground text-center">
           {t('title')}
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance text-center">
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance text-center md:mb-10 mb-5">
           {t('subtitle')}
         </p>
         <Carousel
@@ -68,9 +69,14 @@ export function BestChoiceMenu() {
         >
           <CarouselContent>
             {bestChoiceMenuItems.map((item) => (
-              <CarouselItem key={item.id} className="md:basis-1/3">
-                <Image src={item.image} alt={item.title} className="scale-105" />
-                <h3 className="font-manrope font-bold text-lg text-primary mb-1 mt-5">
+              <CarouselItem key={item.id} className="md:basis-1/3 relative p-5">
+                <Image
+                  src={BestChoiceIcon}
+                  alt="Best Choice Icon"
+                  className="absolute top-11 right-11 md:w-32 md:h-32 w-24 h-24 translate-x-1/2 -translate-y-1/2"
+                />
+                <Image src={item.image} alt={item.title} />
+                <h3 className="font-hs-mische font-bold text-lg text-primary mb-1 mt-5">
                   {item.title}
                 </h3>
               </CarouselItem>

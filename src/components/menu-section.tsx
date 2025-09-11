@@ -24,7 +24,7 @@ export function MenuSection() {
     <section id="menu" className=" bg-background">
       <div className="container mx-auto px-4">
         <header className="text-center mb-16">
-          <h2 className="font-manrope font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
+          <h2 className="font-hs-mische font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
             {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">

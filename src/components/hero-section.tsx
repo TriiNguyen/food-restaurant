@@ -34,13 +34,13 @@ export function HeroSection({
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="font-manrope font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-balance">
+        <h1 className="font-hs-mische font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-balance">
           {title}
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-balance opacity-90">{subtitle}</p>
 
         {isHomePage && (
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-row gap-4 justify-center mb-12">
             <Button size="lg" variant="destructive">
               {t('cta')}
             </Button>

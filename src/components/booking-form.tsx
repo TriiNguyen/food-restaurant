@@ -8,7 +8,7 @@ export function BookingForm() {
   const t = useTranslations()
   return (
     <div className="container mx-auto px-4 py-20">
-      <h2 className="text-5xl font-normal text-center mb-4 font-hs-mische max-w-4xl mx-auto">
+      <h2 className="md:text-5xl text-3xl font-normal text-center mb-4 font-hs-mische max-w-4xl mx-auto">
         {t('contact.reservation.heading')}
       </h2>
       <p className="text-xl text-center mb-10 max-w-3xl mx-auto">

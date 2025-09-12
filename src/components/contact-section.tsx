@@ -20,7 +20,7 @@ export function ContactSection() {
                 {t('contact.contactForm.title')}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-0 md:px-6">
               <form className="space-y-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>

@@ -61,7 +61,7 @@ export function LanguageSwitcher() {
         <span className="hidden sm:inline text-sm">
           {languages.find((lang) => lang.code === current)?.name}
         </span>
-        <ChevronDown className="w-4 h-4" />
+        <ChevronDown className="w-4 h-4 hidden md:block" />
       </Button>
 
       {isOpen && (

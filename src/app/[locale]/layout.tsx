@@ -12,7 +12,7 @@ import { Footer } from '@/components/footer'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import localFont from 'next/font/local'
-import { FloatGroupIcons } from '@/components/float-group-icons'
+import { AppProvider } from '@/providers/app-provider'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -40,8 +40,13 @@ const SFProDisplay = localFont({
   src: [
     {
       path: '../../../public/fonts/sf-pro-display/SFPRODISPLAYREGULAR.otf',
-      weight: '400',
       style: 'normal',
+      weight: '400',
+    },
+    {
+      path: '../../../public/fonts/sf-pro-display/SFPRODISPLAYBOLD.otf',
+      style: 'normal',
+      weight: '700',
     },
   ],
   variable: '--font-sf-pro-display',
@@ -66,10 +71,11 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider>
           <Suspense fallback={null}>
-            <Header />
-            {children}
-            <FloatGroupIcons />
-            <Footer />
+            <AppProvider>
+              <Header />
+              {children}
+              <Footer />
+            </AppProvider>
           </Suspense>
         </NextIntlClientProvider>
         <Analytics />

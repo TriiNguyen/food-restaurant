@@ -1,9 +1,12 @@
+'use client'
+
 import GalleryImage1 from '@/assets/gallery1.png'
 import GalleryImage2 from '@/assets/gallery2.png'
 import GalleryImage3 from '@/assets/gallery3.png'
 import GalleryImage4 from '@/assets/gallery4.png'
 import GalleryImage5 from '@/assets/gallery5.png'
 import GalleryImage6 from '@/assets/gallery6.png'
+import { useTranslations } from 'next-intl'
 
 import Image from 'next/image'
 
@@ -34,16 +37,16 @@ export function GallerySection() {
       alt: 'Gallery Image 6',
     },
   ]
-
+  const t = useTranslations('gallery')
   return (
     <section id="gallery" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-hs-mische font-bold text-3xl md:text-4xl lg:text-5xl mb-6 text-foreground">
-            Gallery
+            {t('title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-balance">
-            A visual journey through our authentic Vietnamese dishes and warm, welcoming atmosphere
+            {t('subtitle')}
           </p>
         </div>
 

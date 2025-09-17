@@ -109,14 +109,18 @@ export function ContactSection() {
         </div>
 
         {/* Map Placeholder */}
-        <Card className="mt-12">
+        <Card className="mt-12 py-0">
           <CardContent className="p-0">
             <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                <p className="text-muted-foreground">Interactive Map</p>
-                <p className="text-sm text-muted-foreground">Hauptstraße 123, Mühldorf am Inn</p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10321.618862530548!2d10.828666!3d49.703182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a21ae3f57ac4b9%3A0xecbd2dd46602df8e!2zQW0gQWlzY2hwYXJrIDIsIDkxMzE1IEjDtmNoc3RhZHQsIMSQ4bupYw!5e0!3m2!1svi!2s!4v1758107370390!5m2!1svi!2s"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="100%"
+              />
             </div>
           </CardContent>
         </Card>

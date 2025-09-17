@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 export function Footer() {
   const t = useTranslations('nav')
+  const tFooter = useTranslations('footer')
 
   return (
     <footer className="bg-card border-t border-border">
@@ -25,7 +26,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-manrope font-semibold text-lg mb-4 text-foreground font-hs-mische">
-              Quick Links
+              {tFooter('quickLinks')}
             </h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
@@ -46,7 +47,7 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="font-manrope font-semibold text-lg mb-4 text-foreground font-hs-mische">
-              Contact
+              {tFooter('contact')}
             </h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
@@ -69,7 +70,7 @@ export function Footer() {
           {/* Opening Hours */}
           <div>
             <h4 className="font-manrope font-semibold text-lg mb-4 text-foreground font-hs-mische">
-              Opening Hours
+              {tFooter('hours')}
             </h4>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
@@ -83,7 +84,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 Miss Hoian Mühldorf. All rights reserved. |
+            © 2025 Miss Hoian Mühldorf. {tFooter('rights')} |
             <span className="ml-1">Authentic Vietnamese Restaurant in Bavaria</span>
           </p>
         </div>

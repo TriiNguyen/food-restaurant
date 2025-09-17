@@ -104,7 +104,7 @@ export function Header() {
               </li>
             ))}
             <div className="pt-4 border-t border-border space-y-4">
-              <Button className="w-full bg-primary hover:bg-primary/90">Reservation</Button>
+              <Button className="w-full bg-primary hover:bg-primary/90">{t('reservation')}</Button>
             </div>
           </ul>
         </div>
